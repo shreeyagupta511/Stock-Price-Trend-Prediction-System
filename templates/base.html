@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Stock App{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- ☰ MENU (COMMON FOR ALL PAGES) -->
+<div class="menu-container">
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <div class="dropdown" id="dropdownMenu">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/input">Predict</a>
+    <a href="/topstocks">Top Stocks</a>
+    <a href="/portfolio_input">Portfolio</a>
+  </div>
+
+</div>
+
+<!-- PAGE CONTENT GOES HERE -->
+<div style="margin-top:80px;">
+  {% block content %}{% endblock %}
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("dropdownMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

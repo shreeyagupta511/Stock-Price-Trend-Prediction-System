@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Stock | StockTrend</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='input.css') }}">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <h2>StockTrend</h2>
+</div>
+
+<!-- Main Content -->
+<div class="card">
+
+<h2>Upload Stock Data</h2>
+
+<p>Enter an NSE stock symbol to fetch live market data and predict future trends.</p>
+
+<form action="/upload" method="POST">
+
+    <input
+    type="text"
+    name="symbol"
+    placeholder="Enter Stock Symbol (e.g. RELIANCE.NS)"
+    required>
+
+    <br><br>
+
+    <button type="submit" class="btn">Predict Trend</button>
+
+</form>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 | Real-Time Stock Market Analysis & Prediction
+</footer>
+
+</body>
+</html>

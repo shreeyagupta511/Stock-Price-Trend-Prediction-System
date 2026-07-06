@@ -1,0 +1,146 @@
+/* ===== RESET ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* ===== BODY ===== */
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+url("../static/background2.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+min-height:100vh;
+
+display:flex;
+flex-direction:column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.navbar h2{
+font-size:48px;
+}
+
+.navbar ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+.navbar ul li a{
+text-decoration:none;
+color:white;
+font-size:28px;
+transition:0.3s;
+}
+
+.navbar ul li a:hover{
+color:#00c6ff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container{
+width:80%;
+margin:100px auto;
+text-align:center;
+flex:1;
+}
+
+/* ===== HEADING ===== */
+.container h1{
+font-size:48px;
+margin-bottom:40px;
+}
+
+/* ===== METHOD GRID ===== */
+.method-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+
+width:70%;
+margin:0 auto 40px auto;   /* center grid */
+}
+
+/* ===== METHOD CARDS ===== */
+.method-card{
+background:rgba(32,58,67,0.9);
+padding:25px;
+border-radius:12px;
+
+height:130px;               /* equal height */
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+backdrop-filter:blur(8px);
+
+transition:0.3s;
+}
+
+.method-card:hover{
+transform:translateY(-6px);
+background:rgba(32,58,67,1);
+}
+
+.method-card h3{
+margin-bottom:8px;
+color:#00c6ff;
+}
+
+.method-card p{
+font-size:18px;
+}
+
+/* ===== PROCESS TEXT ===== */
+.process{
+font-size:18px;
+margin:30px auto 40px auto;
+width:60%;
+line-height:1.6;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+display:block;
+margin:20px auto 40px auto;   /* centered properly */
+
+padding:14px 35px;
+border:none;
+border-radius:30px;
+
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+color:white;
+
+font-size:16px;
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+background:#00000030;
+}

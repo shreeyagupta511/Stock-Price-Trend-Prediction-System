@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Stock Price Trend Predictor{% endblock %}
+
+{% block content %}
+<head>
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+  <!-- optional font for modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dashboard">
+
+  <div class="overlay">
+
+    <h1 class="title">📊 Stock Analysis Dashboard</h1>
+
+    <p class="subtitle">Choose an option to proceed</p>
+
+    <div class="card-container">
+
+      <a href="/input" class="card">
+        <h2>📈 Predict Stock</h2>
+        <p>Analyze and predict future stock price trends</p>
+      </a>
+
+      <a href="/topstocks" class="card">
+       <h2> 🔥 Top 5 Stocks </h2>
+        <p>Best performing stocks of the day</p>
+      </a>
+
+      <a href="/portfolio_input" class="card">
+      <h2>💼 Portfolio Recommendation </h2>
+        <p>Get AI-based investment suggestions</p>
+      </a>
+
+
+    </div>
+
+  </div>
+
+</body>
+{% endblock %}

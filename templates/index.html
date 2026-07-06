@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StockTrend | Overview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>StockTrend</h2>
+</div>
+
+<div class="container">
+
+<h1>How The System Works</h1>
+
+<div class="method-grid">
+
+    <div class="method-card">
+        <h3>Linear Regression</h3>
+        <p>Detects the overall stock price trend using a best-fit line and used to fit a curve that minimizes prediction error.</p>
+    </div>
+
+    <div class="method-card">
+        <h3>Numerical Differentiation</h3>
+        <p>Measures rate of change in prices to identify market momentum and used to identify the trend direction by computing rate of change.</p>
+    </div>
+
+    <div class="method-card">
+        <h3>Euler Method</h3>
+        <p>Uses recent price change to estimate the next-day stock value and used to approximate future price using differential equation modeling.</p>
+    </div>
+
+    <div class="method-card">
+        <h3>Interpolation</h3>
+        <p>Fits a smooth curve to estimate intermediate and future stock values and used to estimate stock price values at unknown points using known data.</p>
+    </div>
+
+</div>
+
+<p class="process">
+The system will analyze real time stock trends,
+detect volatility, and predict the next-day price.
+</p>
+
+<a href="{{ url_for('input_page') }}">
+    <button class="btn">Proceed to Upload</button>
+</a>
+
+</div>
+
+<footer>
+    © 2026 | Real-Time Stock Market Analysis & Prediction
+</footer>
+
+</body>
+</html>

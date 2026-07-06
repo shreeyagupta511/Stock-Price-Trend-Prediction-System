@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Stock Price Trend Predictor{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div class="navbar">
+    <h2>StockTrend</h2>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    
+    <div class="hero-text">
+        <h1>Real-Time Stock Trend Prediction & Portfolio Recommendation System</h1>
+
+        <p>
+        This project uses real-time stock market data to analyze trends,
+        predict future stock prices using numerical methods, and assist users
+        in making informed investment decisions.
+
+        The system compares multiple prediction techniques, displays current
+        stock prices, visualizes trends through interactive charts, identifies
+        top-performing stocks, and generates personalized portfolio
+        recommendations based on the user's investment amount.
+        </p>
+
+    </div>
+
+    <a href="{{ url_for('dashboard') }}">
+    <button style="
+        background-color: #1a237e;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;">
+        
+        Go to Dashboard
+        </button>
+    </a>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 | Real-Time Stock Market Analysis & Prediction
+</footer>
+
+</body>
+{% endblock %}

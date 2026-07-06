@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>StockTrend</h2>
+
+    <h2>
+        Current Stock Price:
+        ₹ {{ current_price }}
+    </h2>
+    <h2>
+        Stock: {{ stock_name }}
+    </h2>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <!-- BEST RESULT -->
+    <div class="best-box">
+        <h2>Best Prediction Based on Minimum Error</h2>
+        <p><strong>Method:</strong> {{ best_method }}</p>
+        <p><strong>Next Day Predicted Price:</strong> {{ best_prediction }}</p>
+        
+        <p><strong>Current Price: ₹{{ current_price }}</strong></p>
+        
+        <p><strong>Expected Return: {{ profit_percent }}%</strong></p>
+        
+        <p><strong>Recommendation: {{ recommendation }}</strong></p>
+
+        <p><strong>Date: {{ today }}</strong></p>
+    </div>
+
+    <!-- INTERPRETATION -->
+    <div class="interpretation-box">
+        <h2>Model Interpretation</h2>
+
+        <div class="interpret-grid">
+            <div class="interpret-item">
+                <h4>Trend</h4>
+                <p>{{ trend_msg }}</p>
+            </div>
+
+            <div class="interpret-item">
+                <h4>Momentum</h4>
+                <p>{{ momentum_msg }}</p>
+            </div>
+
+            <div class="interpret-item">
+                <h4>Volatility</h4>
+                <p>{{ volatility_msg }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAPH SECTION -->
+    <div class="grid-container">
+
+        <div class="graph-box">
+            {{ linear_html|safe }}
+        </div>
+
+        <div class="graph-box">
+            {{ euler_html|safe }}
+        </div>
+
+        <div class="graph-box">
+            {{ diff_html|safe }}
+        </div>
+
+        <div class="graph-box">
+            {{ interp_html|safe }}
+        </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="btn-container">
+        <a href="{{ url_for('input_page') }}">
+            <button class="btn">Analyze Another File</button>
+        </a>
+    </div>
+
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+
+    <a href="{{ url_for('top_stocks') }}">
+
+        <button style="
+            background-color: #1a237e;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        ">
+            View Top Stocks Today
+        </button>
+</a>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+
+    <a href="{{ url_for('portfolio_input') }}">
+
+        <button style="
+            background-color: #1a237e;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        ">
+            Portfolio Recommendation
+        </button>
+
+</div>
+
+
+</body>
+</html>

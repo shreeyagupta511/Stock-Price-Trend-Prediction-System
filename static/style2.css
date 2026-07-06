@@ -1,0 +1,227 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    color: white;
+
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("../static/background3.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+/* left corner heading */
+.navbar h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* right corner links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #1587ce;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+.hero {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+/* main heading */
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* second heading */
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;   /* increased spacing */
+    color: #ffd700;
+}
+
+/* paragraph content */
+.hero-text p {
+    font-size: 22px;       /* more readable size */
+    line-height: 1.8;
+    text-align: justify;   /* justified text */
+    margin-bottom: 15px;
+}
+
+/* ===== GET STARTED BUTTON ===== */
+
+.btn {
+    position: fixed;       /* keeps button bottom center */
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 16px 40px;
+    background-color: white;
+    color: #1e3c72;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1288fd;
+    color: black;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/* ===== DASHBOARD ===== */
+
+.dashboard {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("background1.webp") no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.75);
+  min-height: 100vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+/* FLOATING CARDS */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 300px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* ===== MENU ===== */
+.menu-container {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.dropdown a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background: blue;
+}

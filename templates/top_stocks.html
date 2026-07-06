@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='result.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Stocks Today</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+
+            background-image: url("{{ url_for('static', filename='background5.jpg') }}");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            width: 80%;
+            margin: 50px auto;
+
+            background: rgba(255,255,255,0.88);
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+
+            color: black;
+        }
+
+        h1{
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 30px;
+        }
+
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+
+        th{
+            background-color:#1a237e;
+            color:white;
+
+            padding:12px;
+        }
+
+        td{
+            text-align:center;
+            padding:12px;
+        }
+
+        tr:nth-child(even){
+            background-color:#f2f2f2;
+        }
+
+        tr:hover{
+            background-color:#dbe9ff;
+        }
+
+        .rank{
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+    <h2>StockTrend</h2>
+    </div>
+
+    <div class="container">
+
+        <h1>Top 5 Recommended Stocks Today</h1>
+
+        <table border="1">
+
+            <tr>
+                <th>Rank</th>
+                <th>Stock</th>
+                <th>Expected Return (%)</th>
+            </tr>
+
+            {% for stock in stocks %}
+
+            <tr>
+
+                <td class="rank">
+                    {{ loop.index }}
+                </td>
+
+                <td>
+                    {{ stock.stock }}
+                </td>
+
+                <td>
+                    {{ stock.profit }}
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+
+</body>
+
+</html>

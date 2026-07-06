@@ -1,0 +1,105 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+font-family:'Poppins',sans-serif;
+color:white;
+min-height:100vh;
+
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("background1.WEBP");
+
+background-size:cover;
+background-position:center;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.navbar ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+/* HERO */
+
+.hero{
+width:65%;
+margin:160px auto 0 auto;
+text-align:center;
+}
+
+/* MAIN TITLE */
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+/* SECOND TITLE */
+
+.hero h2{
+font-size:36px;
+margin-bottom:40px;
+color:#00c6ff;
+}
+
+/* CONTENT */
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+text-align:justify;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.home-btn{
+position:fixed;
+bottom:60px;
+left:50%;
+transform:translateX(-50%);
+
+padding:15px 40px;
+border:none;
+border-radius:30px;
+
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+color:white;
+
+font-size:20px;
+cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.8;
+}

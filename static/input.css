@@ -1,0 +1,95 @@
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* ===== BODY ===== */
+
+body{
+font-family:'Poppins',sans-serif;
+background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("../static/background4.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+color:white;
+min-height:100vh;
+
+display:flex;
+flex-direction:column;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+/* NAVBAR LINKS */
+
+.navbar ul{
+list-style:none;
+display:flex;        /* horizontal */
+gap:30px;
+}
+
+.navbar ul li a{
+text-decoration:none;
+color:white;
+font-size:28px;
+}
+
+/* ===== CARD ===== */
+
+.card{
+width:420px;
+margin:140px auto;
+padding:40px;
+
+background:#203a43;
+border-radius:12px;
+text-align:center;
+}
+
+/* FILE INPUT */
+
+input[type="file"]{
+margin:25px 0;
+}
+
+/* BUTTON */
+
+.btn{
+padding:12px 30px;
+border:none;
+border-radius:25px;
+
+background:#00c6ff;
+color:white;
+
+cursor:pointer;
+font-size:28px;
+}
+
+/* BUTTON HOVER */
+
+.btn:hover{
+background:#0095cc;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+margin-top:auto;
+text-align:center;
+padding:20px;
+font-size:14px;
+opacity:0.8;
+}
