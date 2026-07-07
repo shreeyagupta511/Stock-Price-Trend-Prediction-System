@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import numpy as np
 from stock_data import get_stock_data
+from stock_list import search_stock
 from datetime import datetime
 
 from methods import (
@@ -50,6 +51,17 @@ def about():
 def contact():
     return render_template('contact.html')
 
+# --------------- SEARCH STOCK ------------------------
+@app.route("/search-stock")
+def search_stock_route():
+
+    keyword = request.args.get("q", "")
+
+    market = request.args.get("market", "global")
+
+    results = search_stock(keyword, market)
+
+    return jsonify(results)
 
 # ---------------- FILE UPLOAD ----------------
 @app.route("/upload", methods=["POST"])

@@ -22,15 +22,48 @@
 
 <form action="/upload" method="POST">
 
-    <input
-    type="text"
-    name="symbol"
-    placeholder="Enter Stock Symbol (e.g. RELIANCE.NS)"
-    required>
+    <label for="market"><strong>Select Market</strong></label>
 
+<br><br>
+
+<select id="market" name="market" class="dropdown">
+
+    <option value="india">🇮🇳 India (NSE/BSE)</option>
+
+    <option value="usa">🇺🇸 USA (NASDAQ/NYSE)</option>
+
+    <option value="global">🌍 Global</option>
+
+</select>
+
+<br><br>
+
+    <label for="companySearch"><strong>Search Company</strong></label>
+
+<div class="search-container">
+
+    <input
+        type="text"
+        id="companySearch"
+        placeholder="Search company..."
+        autocomplete="off"
+        required>
+
+    <input
+        type="hidden"
+        id="symbol"
+        name="symbol">
+
+    <div id="suggestions"></div>
+
+</div>
     <br><br>
 
-    <button type="submit" class="btn">Predict Trend</button>
+    <button type="submit" class="btn">
+
+        Predict Trend
+
+    </button>
 
 </form>
 
@@ -40,6 +73,8 @@
 <footer>
     © 2026 | Real-Time Stock Market Analysis & Prediction
 </footer>
+
+<script src="{{ url_for('static', filename='search.js') }}"></script>
 
 </body>
 </html>
